@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrimeGameBlazor_API", "..\CrimeGameBlazor_API\CrimeGameBlazor_API.csproj", "{180A775D-A5CA-480D-950F-42BDB03AC615}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrimeGameBlazor_Client", "..\CrimeGameBlazor_Client\CrimeGameBlazor_Client.csproj", "{6922BEEC-31FB-49C5-A3A0-6C5D84569D9D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrimeGameBlazor_Business", "..\CrimeGameBlazor_Business\CrimeGameBlazor_Business.csproj", "{3E0BC19B-E609-46EC-BF2E-F0BB82B6A710}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrimeGameBlazor_DataAccess", "..\CrimeGameBlazor_DataAccess\CrimeGameBlazor_DataAccess.csproj", "{4DE3D8E9-2279-479E-8FC2-9FCFFF31EA72}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrimeGameBlazor_Models", "..\CrimeGameBlazor_Models\CrimeGameBlazor_Models.csproj", "{365F3FF7-DAA3-4317-9DFD-E80E080977E4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrimeGameBlazor_Server", "..\CrimeGameBlazor_Server\CrimeGameBlazor_Server.csproj", "{EE488428-655D-4467-8CA4-22A4B97BDA4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{180A775D-A5CA-480D-950F-42BDB03AC615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{180A775D-A5CA-480D-950F-42BDB03AC615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{180A775D-A5CA-480D-950F-42BDB03AC615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{180A775D-A5CA-480D-950F-42BDB03AC615}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6922BEEC-31FB-49C5-A3A0-6C5D84569D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6922BEEC-31FB-49C5-A3A0-6C5D84569D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6922BEEC-31FB-49C5-A3A0-6C5D84569D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6922BEEC-31FB-49C5-A3A0-6C5D84569D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E0BC19B-E609-46EC-BF2E-F0BB82B6A710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E0BC19B-E609-46EC-BF2E-F0BB82B6A710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E0BC19B-E609-46EC-BF2E-F0BB82B6A710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E0BC19B-E609-46EC-BF2E-F0BB82B6A710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DE3D8E9-2279-479E-8FC2-9FCFFF31EA72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DE3D8E9-2279-479E-8FC2-9FCFFF31EA72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DE3D8E9-2279-479E-8FC2-9FCFFF31EA72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DE3D8E9-2279-479E-8FC2-9FCFFF31EA72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{365F3FF7-DAA3-4317-9DFD-E80E080977E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{365F3FF7-DAA3-4317-9DFD-E80E080977E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{365F3FF7-DAA3-4317-9DFD-E80E080977E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{365F3FF7-DAA3-4317-9DFD-E80E080977E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE488428-655D-4467-8CA4-22A4B97BDA4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE488428-655D-4467-8CA4-22A4B97BDA4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE488428-655D-4467-8CA4-22A4B97BDA4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE488428-655D-4467-8CA4-22A4B97BDA4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {57F37FDE-D44B-4844-9201-F232B5ACB76F}
+	EndGlobalSection
+EndGlobal

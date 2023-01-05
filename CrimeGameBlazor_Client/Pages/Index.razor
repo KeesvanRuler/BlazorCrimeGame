@@ -1,0 +1,58 @@
+﻿@page "/"
+@inject IGangsterService GangsterService;
+@inject NavigationManager NavigationManager;
+@attribute [Authorize]
+
+<PageTitle>Overview</PageTitle>
+
+@if (Gangster != null)
+{
+    <h2>Welkom @Gangster.Name, als dat je echte naam is...</h2>
+    <p>Je hebt momenteel een schietervaring van @Gangster.ShootingSkill%.</p>
+    <p>Je hebt momenteel €@Gangster.AmountOfMoneyInPocket,- op zak.</p>
+    @if (Gangster.InPrisonUntill > DateTime.Now)
+    {
+        <p>Je zit momenteel in de gevangenis.</p>
+    }
+    else if (Gangster.NextBasicCrimeAt > DateTime.Now)
+    {
+        <p>Je kan pas over @((Gangster.NextBasicCrimeAt - DateTime.Now).ToString(@"hh\:mm\:ss")) minuten weer een basic crime plegen.</p>
+    }
+    else
+    {
+        <_BasicCrime OnClose="OnClose"></_BasicCrime>
+    }
+}
+@code 
+{
+    public Gangster? Gangster { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        Gangster = await GangsterService.Get();
+        if (Gangster == null)
+        {
+            NavigationManager.NavigateTo("/CreateGangster");
+        }
+    }
+
+    private async void OnClose()
+    {
+        Gangster = await GangsterService.Get();
+        StateHasChanged();
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            new Timer(DateTimeCallback, null, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
+        }
+    }
+
+    private async void DateTimeCallback(object state)
+    {
+        await InvokeAsync(StateHasChanged);
+    }
+}
+

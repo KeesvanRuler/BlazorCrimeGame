@@ -1,0 +1,60 @@
+﻿@page "/UserOverview"
+@inject IUserRepository userRepository;
+@attribute [Authorize(Roles = "Admin")]
+
+<div class="row mt-4">
+    <div class="col-6">
+        <h4 class="card-title text-primary">Lijst van gebruikers</h4>
+    </div>
+    <div class="col-12 p-3">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var User in Users)
+                {
+                    <tr>
+                        <td>
+                            @User.Name
+                        </td>
+                        <td>
+                            @User.Email
+                        </td>
+                        <td>
+                            <button class="btn btn-danger" @onclick="()=>HandleDelete(User.Id)">Delete</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@code {
+    private IEnumerable<UserDTO> Users { get; set; } = new List<UserDTO>();
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await LoadUsers();
+        }
+    }
+
+    private async Task LoadUsers()
+    {
+        Users = await userRepository.GetAll();
+        StateHasChanged();
+    }
+
+    private async Task HandleDelete(string Id)
+    {
+        await userRepository.DeleteById(Id);
+        await LoadUsers();
+    }
+}
